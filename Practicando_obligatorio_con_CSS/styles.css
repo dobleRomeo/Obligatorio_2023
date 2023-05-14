@@ -1,0 +1,147 @@
+body {
+  background-color: #eee;
+}
+
+/*ESTILO DEL TITULO DEL FORMULARIO "MENU PRINCIPAL"*/
+#seleccioneUsuario h3 {
+  font-size: 50px;
+  color: rgba(5, 92, 41, 0.8);
+}
+
+/*ESTILO DE BOTONOES "CENSISTA" E "INVITADO" DEL FORMULARIO "MENU PRINCIPAL"*/
+.btnSeleccionUsuarios {
+  background-color: rgb(50, 50, 168);
+  font-size: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 10px;
+  color: white;
+}
+
+.btnSeleccionUsuarios:hover {
+  opacity: 0.8;
+}
+
+/*ESTILO DEL LOS FORMULARIOS*/
+.stylesFormularios {
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 30%;
+  padding: 12px;
+}
+
+/*ESTILO DE BOTONOES QUE AVANZAN EN LA APLICACION*/
+.btnAdelante {
+  font-size: 15px;
+  background-color: rgb(55, 55, 204);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid;
+  width: 200px;
+}
+
+.btnAdelante:hover {
+  opacity: 0.8;
+}
+
+/*ESTILO DEL BOTON "VOLVER"*/
+.btnAtras {
+  font-size: 15px;
+  background-color: rgb(51, 51, 56);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid;
+  width: 200px;
+}
+
+.btnAtras:hover {
+  opacity: 0.8;
+}
+
+/*ESTILO DEL BOTON "CERRAR SESION" DEL FORMULARIO DEL "MENU CENSISTA",
+"SALIR" DEL "MENU INVITADO" Y "ELIMINAR DATOS" DEL CENSO POR PARTE DEL INVITADO*/
+.btnCerrarSalirEliminar {
+  font-size: 15px;
+  background-color: rgb(233, 40, 40);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid;
+  width: 200px;
+}
+
+.btnCerrarSalirEliminar:hover {
+  opacity: 0.8;
+}
+
+/*ESTILO DEL BOTON "GUARDAR CENSO" EN EL PERFIL DEL CESITA Y EN EL DE INVITADO*/
+.btnGuardarCenso {
+  font-size: 15px;
+  background-color: rgb(28, 141, 6);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid;
+  width: 200px;
+}
+
+#btnGuardarCenso:hover {
+  opacity: 0.8;
+}
+
+#seleccioneUsuario {
+  display: block;
+}
+
+#formRegistrarse {
+  display: none;
+}
+
+#formIniciarSesion {
+  display: none;
+}
+
+#formMenuCensista {
+  display: none;
+}
+
+#formRealizarCenso {
+  display: none;
+}
+
+#formConsultarCensos {
+  display: none;
+}
+
+#formReasignar {
+  display: none;
+}
+
+#formInfoEstadistica {
+  display: none;
+}
+
+#formAccesoInvitado {
+  display: none;
+}
+
+#formMenuInvitado {
+  display: none;
+}
+
+#formEditarDatos {
+  display: none;
+}
+
+#formEliminarDatos {
+  display: none;
+}
+
+#formListaCensados {
+  display: none;
+}

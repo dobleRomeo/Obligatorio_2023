@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Censo Nacional</title>
+  </head>
+  <body>
+    <center>
+      <!-- MENU DE USUARIOS -->
+      <form id="seleccioneUsuario">
+        <h3>SELECCIONE TIPO DE USUARIO</h3>
+        <input type="button" id="btnCensista" class="btnSeleccionUsuarios" value="Censista" />
+        <input type="button" id="btnInvitado" class="btnSeleccionUsuarios" value="Invitado" />
+      </form>
+
+      <!-- REGISTRARSE -->
+      <div id="formRegistrarse" class="stylesFormularios">
+        <form>
+          <h3>Registrarse</h3>
+          <label for="inputName">Ingrese su nombre:</label>
+          <br />
+          <input type="text" id="inputName" />
+          <br />
+          <br />
+          <label for="inputUserName">Nombre de usuario:</label>
+          <br />
+          <input type="text" id="inputUserName" />
+          <br />
+          <br />
+          <label for="inputPass">Contraseña:</label>
+          <br />
+          <input type="password" id="inputPass" />
+          <br />
+          <br />
+          <input type="button" id="btnRegistrarse" class="btnAdelante" value="Registrarse" />
+          <p id="pRegistro"></p>
+          <input type="button" id="btnYaRegistrado" class="btnAdelante" value="Ya tengo cuenta" />
+          <br />
+          <br />
+          <input type="button" id="btnVolverMenuUsuarios" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- INICIAR SESION -->
+      <div id="formIniciarSesion" class="stylesFormularios">
+        <form>
+          <h3>Iniciar Sesión</h3>
+          <label for="inputUserName">Nombre de usuario:</label>
+          <br />
+          <input type="text" id="inputUserName" />
+          <br />
+          <br />
+          <label for="inputPass">Contraseña:</label>
+          <br />
+          <input type="password" id="inputPass" />
+          <br />
+          <br />
+          <input type="button" id="btnIniciarSesion" class="btnAdelante" value="Iniciar Seción" />
+          <p id="pIniciarSesion"></p>
+          <input type="button" id="btnVolver" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- MENU DE CENCISTA -->
+      <form id="formMenuCensista" class="stylesFormularios">
+        <h3>MENU CENCISTA</h3>
+        <input type="button" id="btnIngresarDatos" class="btnAdelante" value="Realizar Censo" />
+        <br />
+        <br />
+        <input type="button" id="btnConsutaCensos" class="btnAdelante" value="Consultar Censos" />
+        <br />
+        <br />
+        <input type="button" id="btnReasignarPersonas" class="btnAdelante" value="Reasignar Persona" />
+        <br />
+        <br />
+        <input type="button" id="btnVisualizarEstadisticas" class="btnAdelante" value="Información estadística" />
+        <br />
+        <br />
+        <input type="button" id="btnCerrarSesion" class="btnCerrarSalirEliminar" value="Cerrar Sesión" />
+      </form>
+
+      <!-- INGRESAR DATOS DE UNA PERSONA -->
+      <div id="formRealizarCenso" class="stylesFormularios">
+        <form>
+          <h3>Ingresar datos de una persona censada</h3>
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" id="inputNombre" />
+          <br />
+          <br />
+          <label for="inputApellido">Apellido:</label>
+          <input type="text" id="inputApellido" />
+          <br />
+          <br />
+          <label for="inputEdad">Edad:</label>
+          <input type="text" id="inputEdad" />
+          <br />
+          <br />
+          <label for="inputCedula">Cédula:</label>
+          <input type="text" id="inputCedula" />
+          <br />
+          <br />
+          <label for="inputDepartamento">Departamento:</label>
+          <select id="inputDepartamento">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <label for="inputOcupacion">Ocupación:</label>
+          <select id="inputOcupacion">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <input type="button" id="btnGuardarCenso" class="btnGuardarCenso" value="Guardar Censo" />
+          <p id="pGuardarCenso"></p>
+          <input type="button" id="btnVolverMenuCensista" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- CONSULTAR CENSOS PRE COMPLETADOS POR VALIDAR -->
+      <div id="formConsultarCensos" class="stylesFormularios">
+        <form>
+          <h3>Consultar censos pre completados por validar</h3>
+          <label for="inputBuscarCedula">Cédula:</label>
+          <input type="text" id="inputBuscarCedula" />
+          <br />
+          <br />
+          <input type="button" id="btnBuscarCedula" class="btnAdelante" value="Buscar Cédula" />
+          <p id="pCensoPorValidar"></p>
+          <input type="button" id="btnVolverMenuCensista2" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- REASIGNAR PERSONA PARA VALIDAR -->
+      <div id="formReasignar" class="stylesFormularios">
+        <form>
+          <h3>Reasignar persona para validar</h3>
+          <label for="inputPersona">Seleccione una Persona:</label>
+          <select id="inputPersona">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <label for="inputCensista">Seleccione un Censista:</label>
+          <select id="inputCensista">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <input type="button" id="btnReasignar" class="btnAdelante" value="Reasignar" />
+          <p id="pReasignacion"></p>
+          <input type="button" id="btnVolverMenuCensista3" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- VISUALIZAR INFORMACION ESTADISTICA -->
+      <div id="formInfoEstadistica" class="stylesFormularios">
+        <form>
+          <h3>Visualizar información estadística</h3>
+          <label for="totalCenados">Total de personas censadas:</label>
+          <br />
+          <br />
+          <label for="totalCenadosPorDepartamento">Total de censadas por Departamento:</label>
+          <br />
+          <br />
+          <label for="pjePendienteValidar">Porcentaje de personas pendientes de validar datos:</label>
+          <br />
+          <br />
+          <label id="selectDepartamento">Seleccione un Departamento:</label>
+          <select id="selectDepartamento">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <table class="tableInfoEstaditica">
+            <tr>
+              <th>Departamento</th>
+              <th>Menores</th>
+              <th>Mayores</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>Canelones</td>
+              <td>15</td>
+              <td>75</td>
+              <td>100 %</td>
+            </tr>
+          </table>
+          <br />
+          <br />
+          <input type="button" id="btnVolverMenuCensista4" class="btnAtras" value="Volver" />
+          <p id="pInfoEstadistica"></p>
+        </form>
+      </div>
+
+      <!------------------------------ INVITADO ------------------------------>
+
+      <!-- INGRESO A LA APLICACION -->
+      <div id="formAccesoInvitado" class="stylesFormularios">
+        <form>
+          <h3>Ingresar sus datos para el censo</h3>
+          <label for="inputCedula">Cédula:</label>
+          <input type="text" id="inputCedula" />
+          <br />
+          <br />
+          <input type="button" id="btnBuscarCedulaInvitado" class="btnAdelante" value="Buscar Cédula" />
+          <p id="pCensoPorValidar"></p>
+          <input type="button" id="btnVolverMenuUsuarios2" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- MENU INVITADO -->
+      <div id="formMenuInvitado" class="stylesFormularios">
+        <form>
+          <h3>MENU INVITADO</h3>
+          <input type="button" id="btnEditarDatos" class="btnAdelante" value="Editar Datos" />
+          <br />
+          <br />
+          <input type="button" id="btnEliminarDatos" class="btnAdelante" value="Eliminar Datos" />
+          <br />
+          <br />
+          <input type="button" id="btnListaCensados" class="btnAdelante" value="Ver Lista de Censados" />
+          <br />
+          <br />
+          <input type="button" id="btnSalir" class="btnCerrarSalirEliminar" value="Sailr" />
+        </form>
+      </div>
+
+      <!-- EDITAR SUS DATOS -->
+      <div id="formEditarDatos" class="stylesFormularios">
+        <form>
+          <h3>Editar sus datos para el censo</h3>
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" id="inputNombre" />
+          <input type="button" id="editNombre" value="Editar" />
+          <br />
+          <br />
+          <label for="inputApellido">Apellido:</label>
+          <input type="text" id="inputApellido" />
+          <input type="button" id="editApellido" value="Editar" />
+          <br />
+          <br />
+          <label for="inputEdad">Edad:</label>
+          <input type="text" id="inputEdad" />
+          <input type="button" id="editEdad" value="Editar" />
+          <br />
+          <br />
+          <label for="inputCedula">Cédula:</label>
+          <input type="text" id="inputCedula" />
+          <input type="button" id="editCedula" value="Editar" />
+          <br />
+          <br />
+          <label for="inputDepartamento">Departamento:</label>
+          <select id="inputDepartamento">
+            <option>Seleccione...</option>
+          </select>
+          <input type="button" id="editDepartamento" value="Editar" />
+          <br />
+          <br />
+          <label for="inputOcupacion">Ocupación:</label>
+          <select id="inputOcupacion">
+            <option>Seleccione...</option>
+          </select>
+          <input type="button" id="editOcupacion" value="Editar" />
+          <br />
+          <br />
+          <input type="button" id="btnGuardarCensoInvitado" class="btnGuardarCenso" value="Guardar Censo" />
+          <p id="pGuardarCensoInv"></p>
+          <p id="pCensistaAsignado"></p>
+          <input type="button" id="btnVolverMenuInvitado" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- ELIMINAR DATOS -->
+      <div id="formEliminarDatos" class="stylesFormularios">
+        <form>
+          <h3>Eliminar sus datos para el censo</h3>
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" id="inputNombre" />
+          <br />
+          <br />
+          <label for="inputApellido">Apellido:</label>
+          <input type="text" id="inputApellido" />
+          <br />
+          <br />
+          <label for="inputEdad">Edad:</label>
+          <input type="text" id="inputEdad" />
+          <br />
+          <br />
+          <label for="inputCedula">Cédula:</label>
+          <input type="text" id="inputCedula" />
+          <br />
+          <br />
+          <label for="inputDepartamento">Departamento:</label>
+          <select id="inputDepartamento">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <label for="inputOcupacion">Ocupación:</label>
+          <select id="inputOcupacion">
+            <option>Seleccione...</option>
+          </select>
+          <br />
+          <br />
+          <input type="button" id="btnEliminarDatosInv" class="btnCerrarSalirEliminar" value="Eliminar datos" />
+          <p id="pEliminarDatos"></p>
+          <input type="button" id="btnVolverMenuInvitado2" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+
+      <!-- LISTA DE CENSADOS -->
+      <div id="formListaCensados" class="stylesFormularios">
+        <form>
+          <h3>Lista de censados</h3>
+          <table border="1">
+            <tr>
+              <th>Departamento</th>
+              <th>Estudian</th>
+              <th>Trabajan</th>
+              <th>Dependientes o independientes</th>
+              <th>Porcentaje del total de censados</th>
+            </tr>
+            <tr>
+              <td>Artigas</td>
+              <td>25</td>
+              <td>40</td>
+              <td>35</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <td>Canelones</td>
+              <td>35</td>
+              <td>35</td>
+              <td>130</td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <td>Montevideo</td>
+              <td>20</td>
+              <td>240</td>
+              <td>140</td>
+              <td>40%</td>
+            </tr>
+          </table>
+          <br />
+          <input type="button" id="btnVolverMenuInvitado3" class="btnAtras" value="Volver" />
+        </form>
+      </div>
+    </center>
+    <script src="./js/0-codigo.js"></script>
+    <script src="./js/1-registrarse.js"></script>
+    <script src="./js/2-iniciar_sesion.js"></script>
+    <script src="./js/3-menu_censista.js"></script>
+    <script src="./js/4-realizar_censo.js"></script>
+    <script src="./js/5-consultar_censos.js"></script>
+    <script src="./js/6-reasignar.js"></script>
+    <script src="./js/7-informacion_estadistica.js"></script>
+    <script src="./js/8-acceso_invitado.js"></script>
+    <script src="./js/9-menu_invitado.js"></script>
+    <script src="./js/10-editar_datos.js"></script>
+    <script src="./js/11-eliminar_Datos.js"></script>
+    <script src="./js/12-ver_lista_censados.js"></script>
+  </body>
+</html>
