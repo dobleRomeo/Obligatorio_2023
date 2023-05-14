@@ -96,6 +96,7 @@ body {
 
 #seleccioneUsuario {
   display: block;
+  background-color: green;
 }
 
 #formRegistrarse {
